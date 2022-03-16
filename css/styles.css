@@ -1,0 +1,132 @@
+/* STYLES FOR THE NATOURS TOUR GUIDE AGENCY */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.7;
+    padding: 30px;
+    min-width: 100%;
+}
+
+.header {
+    height: 95vh;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(105, 233, 115, 0.7), rgba(24, 173, 37, 0.75)), url('/images/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    font-size: 1.6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+    top: 2rem;
+    left: 2rem;
+    position: absolute;
+}
+
+.header__logo {
+    width: 4rem;
+    height: auto;
+}
+
+.header__textbox {
+    position: absolute ;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    /* padding: 2rem; */
+    top: 40%;
+    left: 50%;
+    transform: tanslate(-50%, -50%);
+    /* line-height: .7rem; */
+}
+
+.header-primary {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.header-primary--main {
+    display: block;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    font-size: 6rem;
+    animation-name: moveInLeft ;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+.header-primary--sub {
+    display: block;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    animation-name: moveInRight;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.btn, .btn:link, .btn:visited  {
+    display: inline-block;
+    width: 20rem;
+    /* height: auto; */
+    font-size: 1.6rem;
+    padding: 1rem;
+    transition: all 2s;
+    border-radius: 5rem;
+    background-color: #fff;
+    text-decoration: none;
+    color: rgb(199, 195, 195);
+}
+
+.btn-animated:hover {
+    box-shadow: 0 .3rem rgb(199, 195, 195);
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
